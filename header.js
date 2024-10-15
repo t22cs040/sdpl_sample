@@ -1,0 +1,1 @@
+document.getElementById('header-user-name').innerText = localStorage.getItem('userName');

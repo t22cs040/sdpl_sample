@@ -31,8 +31,10 @@ function login() {
     const inputPassword = document.getElementById('password').value;
 
     if (adminDict[inputUserName] === inputPassword) {
+        localStorage.setItem('userName', inputUserName);
         window.location.href = "./admin_top.html";
     } else if (dictionary[inputUserName] === inputPassword) {
+        localStorage.setItem('userName', inputUserName);
         window.location.href = "./top.html";
     } else {
         document.getElementById('errMessage').innerText = "ログインに失敗しました。もう一度お試しください。";
